@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Draggable</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <script src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".sub , p").draggable({cancel:"#sub2, #sub1"});
+            $("p").draggable({disabled: true});
+        });
+    </script>
+    <style>
+        #main{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .sub{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+            border: 1px solid black;
+            /* float: left; */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="sub" id="sub1" style="background-color: red;"></div>
+        <div class="sub" id="sub2" style="background-color: green;"></div>
+        <div class="sub" id="sub3" style="background-color: blue;"></div>
+        <p>This is a paragraph</p>
+        <p>This is another paragraph</p>
+    </div>
+</body>
+</html>

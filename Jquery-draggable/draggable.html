@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction: Draggable</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <script src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p:first , #imp").draggable();
+        })
+    </script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            border: 1px solid black;
+            margin: 2px;
+        }
+
+        #imp{
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <p>This is my message Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, cum perferendis! Possimus fugit doloremque libero hic? Impedit delectus iste ab, minus, eveniet asperiores alias excepturi officia odio ad, obcaecati nam sed soluta! Neque assumenda voluptatem fugit vitae molestias nemo nulla a quisquam quasi illo facere, velit aliquid est. A temporibus fuga id quo ipsam reiciendis enim itaque nemo laboriosam harum fugit commodi numquam, laudantium consequatur ullam iusto vero voluptatum voluptatibus nam nisi minus ipsa sapiente praesentium odit? Error unde quam praesentium! Exercitationem iste soluta cupiditate! Laboriosam quae veniam, aperiam, quisquam sunt vero dignissimos similique aliquam voluptate at eveniet officia illo.</p>
+    <div id="box"></div>
+    <p id="imp">This is another message !!!</p>
+</body>
+</html>

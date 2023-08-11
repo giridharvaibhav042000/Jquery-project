@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Draggable</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <script src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#sub1").draggable({cursor:"grab", cursorAt:{left:5, top:5}, handle:"p"});
+            $("#sub2").draggable({cursor:"move", cursorAt:{bottom:0}});
+            $("#sub3").draggable({cursor: "crosshair", cursorAt:{right:5, bottom:5}});
+        });
+    </script>
+    <style>
+        #main{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .sub{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+            border: 1px solid black;
+            /* float: left; */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="sub" id="sub1" style="background-color: red;"><p>Click her to move me</p></div>
+        <div class="sub" id="sub2" style="background-color: green;"></div>
+        <div class="sub" id="sub3" style="background-color: blue;"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restrict Draggable</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <script src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#main").draggable();
+            $("#sub1").draggable({axis:"x"})
+            $("#sub2").draggable({axis:"y"})
+            $("#sub3").draggable({containment:"#main"})
+
+        })
+    </script>
+    <style>
+        #main{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .sub{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+            border: 1px solid black;
+            float: left;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="sub" id="sub1" style="background-color: red;"></div>
+        <div class="sub" id="sub2" style="background-color: green;"></div>
+        <div class="sub" id="sub3" style="background-color: blue;"></div>
+    </div>
+</body>
+</html>
